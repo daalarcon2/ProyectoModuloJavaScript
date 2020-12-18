@@ -4,6 +4,12 @@ const HomePage = require('../../pageobjects/home.page');
 
 describe ('Home Page Feature', () =>{
 
+    beforeEach( ()=> {
+        
+        browser.maximizeWindow()
+
+
+    })
    
     it('Click in search button',() =>{
         
@@ -19,15 +25,9 @@ describe ('Home Page Feature', () =>{
         const messageInPlaceHolder='¿Buscas a alguien o algo en específico?'
         HomePage.open()
         HomePage.clickLabelLenguaje()
-        const va=HomePage.inputBusqueda.getAttribute('placeholder')
-        //homePage.inputBusqueda.isFocused()
-        //console.log(homePage.inputBusqueda.isFocused()+"dafafaf")
+        const locatorenpagina=HomePage.inputBusqueda.getAttribute('placeholder')
         expect(HomePage.inputBusqueda).toBeFocused()
-        //(expect(va).toHaveText(message)
-        expect(va).toEqual(messageInPlaceHolder)
-
-        //expect(HomePage.inputBusqueda.getAttribute('placeholder')).toHaveText(message)
-        //console.log(HomePage.inputBusqueda.getAttribute('placeholder')+"mati")
+        expect(locatorenpagina).toEqual(messageInPlaceHolder)
 
     });    
    

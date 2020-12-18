@@ -23,14 +23,6 @@ class HomePage extends Page {
    }
 
 
-    /*focusMethod (a){
-
-        this.labelLenguaje.click();
- 
-        //return this.inputBusqueda.isFocused();
-       
-     }*/
-
     open () {
         return super.open('');
     }
